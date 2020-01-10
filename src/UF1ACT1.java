@@ -20,9 +20,9 @@ public class UF1ACT1 {
 				for (int i = 0; i < arxius.length; i++) {
 					File d = new File(nomFitxer + File.separator + arxius[i]);
 					if (d.isHidden()) {
-						System.out.println(arxius[i] + " (OCULT)");
+						System.out.println(arxius[i] + " (OCULT) (Ultima modificacio: " + d.lastModified() + ")" );
 					} else {
-						System.out.println(arxius[i]);
+						System.out.println(arxius[i] + " (Ultima modificacio: " + d.lastModified() + ")");
 					}
 				}
 
@@ -37,13 +37,15 @@ public class UF1ACT1 {
 					System.out.println("Fitxer ocult   : NO");
 				}
 
-				System.out.println("Ruta           : " + f.getPath());
-				System.out.println("Ruta absoluta  : " + f.getAbsolutePath());
-				System.out.println("Es pot escriure: " + f.canRead());
-				System.out.println("Es pot llegir  : " + f.canWrite());
-				System.out.println("Grandaria      : " + f.length());
-				System.out.println("Es un directori: " + f.isDirectory());
-				System.out.println("Es un fitxer   : " + f.isFile());
+				
+				System.out.println("Ruta               : " + f.getPath());
+				System.out.println("Ruta absoluta      : " + f.getAbsolutePath());
+				System.out.println("Ultima modificacio : " + f.lastModified());
+				System.out.println("Es pot escriure    : " + f.canRead());
+				System.out.println("Es pot llegir      : " + f.canWrite());
+				System.out.println("Grandaria          : " + f.length());
+				System.out.println("Es un directori    : " + f.isDirectory());
+				System.out.println("Es un fitxer       : " + f.isFile());
 			}
 
 		}
